@@ -75,7 +75,8 @@ was a challenging project since it gets tricky in how to merge nodes during dele
 insertion.
 
 Also the concurrency control part is extremely interesting since we want to optimize the B+ tree for many concurrent 
-threads reading and writing without being too
+threads reading and writing without blocking the whole tree (specially the root since all access goes through the root
+of the tree).
 
 ## Parting thoughts
 
